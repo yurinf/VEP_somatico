@@ -63,10 +63,17 @@ mkdir /content/drive/MyDrive/Dados
 ```
 
 ### Carregando o arquivos para o Google Drive
-Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* que se encontram neste repositório. 
-1. Fazer o download dos arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* na sua máquina local
+Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz*, que se encontra neste repositório, e do arquivo *Homo_sapiens_assembly19.fasta*, que será baixado diretamente no diretório **Dados** criado anteriormente.
+
+1. Fazer o download do arquivo *WP312.filtered.vcf.gz* na sua máquina local
 2. Acessar o Google Drive com sua conta Google
-3. Fazer upload dos arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* na pasta **Dados** do seu Google Drive
+3. Fazer upload do arquivo *WP312.filtered.vcf.gz* na pasta **Dados** do seu Google Drive
+4. Fazer download do arquivo *Homo_sapiens_assembly19.fasta* para o diretório **Dados** do seu Google Drive:
+```python
+%%bash
+wget -c https://data.broadinstitute.org/snowman/hg19/Homo_sapiens_assembly19.fasta -P /content/drive/MyDrive/Dados
+```
+‼️**ATENÇÃO‼️:** O arquivo *Homo_sapiens_assembly19.fasta* tem **3Gb**. Verifique se seu Google Drive possui memória livre suficiente antes de realizar o download do referido arquivo.
 
 ## ANOTAÇÃO DO VCF COM ENSEMBL VEP 105.0
 ```python
@@ -82,6 +89,7 @@ Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapi
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
   --individual all
   ```
+  
 ### Visualização da anotação
 Para visualizar a anotação em formato de tabela:
 ```python
