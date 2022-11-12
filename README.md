@@ -1,5 +1,5 @@
 # VEP_somatico
-📝 Anotação de um VCF utilizando Ensembl VEP 105.0 
+Anotação de um VCF utilizando Ensembl VEP 105.0 
 
 ## ÍNDICE
 
