@@ -15,7 +15,7 @@ Existem três interfaces de VEP ([Interface WEB](https://www.ensembl.org/info/do
 Para utilizar o ambiente Google Colab, é necessário criar uma conta Google. Em seguida, acesse o [Google Colab](https://colab.research.google.com/) utilizando sua conta Google. Crie um novo notebook.
 
 # PREPARANDO O AMBIENTE GOOGLE COLAB
-Antes de inciar a anotação utilizando o Ensembl VEP, é necessário preparar o ambiente Google Colab montando o Google Drive (local na nuvem onde estarão os arquivos necessários para o ambiente funcionar corretamente), e instalar as ferramentas como Ensembl VEP e pandas.
+Antes de inciar a anotação utilizando o Ensembl VEP, é necessário preparar o ambiente Google Colab montando o Google Drive (local na nuvem onde estarão os arquivos necessários para o ambiente funcionar corretamente), e instalar as ferramentas como Ensembl VEP e Pandas.
 
 ## Montando o Google Drive
 ```python
@@ -32,7 +32,7 @@ tar -zxvf 105.0.tar.gz
 cd ensembl-vep-105.0
 ./INSTALL.pl --NO_UPDATE 
 ```
-🔴 **NOTA:** Estamos utilizando o Ensembl VEP **105.0**. Acesse o [GitHub do Ensemble](https://github.com/Ensembl/ensembl-vep/tags) para conferir as outra versões do Ensembl VEP.
+🔴 **NOTA:** Estamos utilizando o Ensembl VEP **105.0**. Acesse o [GitHub do Ensembl](https://github.com/Ensembl/ensembl-vep/tags) para conferir as outra versões do Ensembl VEP.
 
 Após a instalação do Ensembl VEP 105.0, é possível testar se a ferramenta foi instalada corretamente com o comando a seguir:
 ```python
@@ -73,3 +73,13 @@ Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapi
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
   --individual all
   ```
+# VISUALIZAÇÃO DA ANOTAÇÃO
+Para visualizar a anotação em formato de tabela:
+```
+%%bash
+import pandas as pd
+import csv
+tabela = pd.read_csv('/content/WP312.filtered.vcf.tsv', sep='\t', skiprows=38)
+df = pd.DataFrame(tabela)
+df
+```
