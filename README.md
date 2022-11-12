@@ -34,7 +34,7 @@ cd ensembl-vep-105.0
 ```
 🔴 **NOTA:** Estamos utilizando o Ensembl VEP **105.0**. Acesse o [GitHub do Ensemble](https://github.com/Ensembl/ensembl-vep/tags) para conferir as outra versões do Ensembl VEP.
 
-Após a instalação do Ensembl VEP 105.0, é possível testar se a ferramenta foi instalada corretamente com o código a seguir:
+Após a instalação do Ensembl VEP 105.0, é possível testar se a ferramenta foi instalada corretamente com o comando a seguir:
 ```python
 %%bash
 cd ensembl-vep-105.0
@@ -47,7 +47,29 @@ cd ensembl-vep-105.0
 pip install pandas
 ```
 
+## Criando diretório no Google Drive para carregar o arquivo VCF
+Criar uma pasta de nome **Dados** no Google Drive.
+```python
+mkdir /content/drive/MyDrive/Dados
+```
+
 ## Carregando o arquivo VCF para o Google Drive
-Utilizaremos para essa prática o arquivo WP312.filtered.vcf.gz que se encontra neste repositório. Faça o download na sua máquina local e faça upload 
+Para essa prática utilizaremos o arquivo WP312.filtered.vcf.gz que se encontra neste repositório. 
+1. Fazer o download do arquivo WP312.filtered.vcf.gz na sua máquina local
+2. Acessar o Google Drive com sua conta Google
+3. Fazer upload do arquivo WP312.filtered.vcf.gz na pasta **Dados** do seu Google Drive
 
-
+# ANOTAÇÃO DO VCF COM ENSEMBL VEP 105.0
+```python
+%%bash
+./ensembl-vep-105.0/vep  \
+  --fork 3 \
+	-i /content/drive/MyDrive/Dados/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
+	-o WP312.filtered.vcf.tsv \
+  --dir_cache /content/drive/Shareddrives/T4-2022/ \
+  --fasta /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/Homo_sapiens_assembly19.fasta \
+  --cache --offline --assembly GRCh37 --refseq  \
+	--pick --pick_allele --force_overwrite --tab --symbol --check_existing\
+  --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
+  --individual all
+  ```
