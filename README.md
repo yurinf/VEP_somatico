@@ -64,10 +64,10 @@ Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapi
 %%bash
 ./ensembl-vep-105.0/vep  \
   --fork 3 \
-	-i /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
+	-i /content/drive/MyDrive/Dados/WP312.filtered.vcf.gz \
 	-o WP312.filtered.vcf.tsv \
-  --dir_cache /content/drive/Shareddrives/T4-2022/ \
-  --fasta /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/Homo_sapiens_assembly19.fasta \
+  --dir_cache /content/drive/MyDrive/Dados/ \
+  --fasta /content/drive/MyDrive/Dados/Homo_sapiens_assembly19.fasta \
   --cache --offline --assembly GRCh37 --refseq  \
 	--pick --pick_allele --force_overwrite --tab --symbol --check_existing\
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
