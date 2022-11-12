@@ -53,18 +53,18 @@ Criar uma pasta de nome **Dados** no Google Drive.
 mkdir /content/drive/MyDrive/Dados
 ```
 
-## Carregando o arquivo VCF para o Google Drive
-Para essa prática utilizaremos o arquivo WP312.filtered.vcf.gz que se encontra neste repositório. 
-1. Fazer o download do arquivo WP312.filtered.vcf.gz na sua máquina local
+## Carregando o arquivos para o Google Drive
+Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* que se encontram neste repositório. 
+1. Fazer o download dos arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* na sua máquina local
 2. Acessar o Google Drive com sua conta Google
-3. Fazer upload do arquivo WP312.filtered.vcf.gz na pasta **Dados** do seu Google Drive
+3. Fazer upload dos arquivos *WP312.filtered.vcf.gz* e *Homo_sapiens_assembly19.fasta* na pasta **Dados** do seu Google Drive
 
 # ANOTAÇÃO DO VCF COM ENSEMBL VEP 105.0
 ```python
 %%bash
 ./ensembl-vep-105.0/vep  \
   --fork 3 \
-	-i /content/drive/MyDrive/Dados/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
+	-i /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
 	-o WP312.filtered.vcf.tsv \
   --dir_cache /content/drive/Shareddrives/T4-2022/ \
   --fasta /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/Homo_sapiens_assembly19.fasta \
