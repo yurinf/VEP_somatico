@@ -18,13 +18,13 @@ Para utilizar o ambiente Google Colab, é necessário criar uma conta Google. Em
 Antes de inciar a anotação utilizando o Ensembl VEP, é necessário preparar o ambiente Google Colab montando o Google Drive (local na nuvem onde estarão os arquivos necessários para o ambiente funcionar corretamente), e instalar as ferramentas como Ensembl VEP e pandas.
 
 ## Montando o Google Drive
-```
+```python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
 
 ## Instalando o Ensembl VEP 105.0
-```
+```python
 %%bash
 sudo apt install unzip curl git libmodule-build-perl libdbi-perl libdbd-mysql-perl build-essential zlib1g-dev
 wget -c https://github.com/Ensembl/ensembl-vep/archive/refs/tags/105.0.tar.gz
@@ -35,19 +35,19 @@ cd ensembl-vep-105.0
 🔴 **NOTA:** Estamos utilizando o Ensembl VEP **105.0**. Acesse o [GitHub do Ensemble](https://github.com/Ensembl/ensembl-vep/tags) para conferir as outra versões do Ensembl VEP.
 
 Após a instalação do Ensembl VEP 105.0, é possível testar se a ferramenta foi instalada corretamente com o código a seguir:
-```
+```python
 %%bash
 cd ensembl-vep-105.0
 ./vep
 ```
 
 ## Instalando o Pandas
-```
+```python
 %%bash
 pip install pandas
 ```
 
 ## Carregando o arquivo VCF para o Google Drive
-Utilizaremos para essa prática o arquivo WP312.filtered.vcf.gz
+Utilizaremos para essa prática o arquivo WP312.filtered.vcf.gz que se encontra neste repositório. Faça o download na sua máquina local e faça upload 
 
 
