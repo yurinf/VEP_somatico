@@ -5,13 +5,13 @@ Anotação de um VCF utilizando Ensembl VEP 105.0
 - [INTRODUÇÃO](#introdução)
 - [ACESSANDO O GOOGLE COLAB](#acessando-o-google-colab)
 - [PREPARANDO O AMBIENTE GOOGLE COLAB](#preparando-o-ambiente-google-colab)
- - [Montando o Google Drive](#montando-o-google-drive)
- - [Instalando o Ensembl VEP 105.0](#instalando-o-ensembl-vep-105.0)
- - [Instalando o Pandas](#instalando-o-pandas)
- - [Criando diretório no Google Drive para carregar o arquivo VCF](#criando-diretorio-no-google-drive-para-carregar-o-arquivo-vcf)
- - [Carregando o arquivos para o Google Drive](#carregando-o-arquivos-para-o-google-drive)
+  - [Montando o Google Drive](#montando-o-google-drive)
+  - [Instalando o Ensembl VEP 105.0](#instalando-o-ensembl-vep-105.0)
+  - [Instalando o Pandas](#instalando-o-pandas)
+  - [Criando diretório no Google Drive para carregar o arquivo VCF](#criando-diretorio-no-google-drive-para-carregar-o-arquivo-vcf)
+  - [Carregando o arquivos para o Google Drive](#carregando-o-arquivos-para-o-google-drive)
 - [ANOTAÇÃO DO VCF COM ENSEMBL VEP 105.0](#anotacao-do-vcf-com-ensembl-vep-105.0)
- - [Visualização da anotação](#visualizacao-da-anotacao)
+  - [Visualização da anotação](#visualizacao-da-anotacao)
 ---
 ## INTRODUÇÃO
 O objetivo desse repositório é explorar, de forma prática, a anotação de um arquivo VCF utilizando o Ensembl VEP 105.0.
