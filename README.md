@@ -73,9 +73,9 @@ Para essa prática utilizaremos os arquivos *WP312.filtered.vcf.gz* e *Homo_sapi
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
   --individual all
   ```
-# VISUALIZAÇÃO DA ANOTAÇÃO
+## Visuzaliação da anotação
 Para visualizar a anotação em formato de tabela:
-```
+```python
 %%bash
 import pandas as pd
 import csv
